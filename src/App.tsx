@@ -1,15 +1,11 @@
-import React from 'react';
+import { useRoutes } from 'react-router-dom';
+import router from './router';
 
-import './App.css';
+
 
 function App() {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <div>Hi</div>
-      </header>
-    </div>
-  );
-}
+   const content = useRoutes(router);
 
+  return <>{content}</>;
+}
 export default App;
